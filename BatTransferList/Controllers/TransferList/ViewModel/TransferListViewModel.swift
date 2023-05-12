@@ -28,7 +28,7 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
     var container: DependencyContainer
     
     var currentPage: Int = 1
-    var transferList = CurrentValueSubject<[TransferListModel]?, Never>(nil)
+    var transferList = CurrentValueSubject<[TransferListDomainModel]?, Never>(nil)
     var shouldRealodTable = CurrentValueSubject<Bool?,Never>(nil)
 }
 
@@ -79,11 +79,22 @@ extension TransferListViewModel {
             self.shouldRealodTable.send(true)
             return
         }
+
         if self.transferList.value == nil {
             self.transferList.send(.init())
         }
+        var isFavorited = false
+
         model.forEach {
-            self.transferList.value?.append($0)
+            if let numbers = UserDefaultsHelper.shared.getStoredCardNumbers(){
+                if numbers.contains($0.card?.cardNumber ?? ""){
+                    isFavorited = true
+                }else{
+                    isFavorited = false
+                }
+            }
+            let domain = TransferListDomainModel(transferModel: $0, isFavorited: isFavorited)
+            self.transferList.value?.append(domain)
         }
         
     }

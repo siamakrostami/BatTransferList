@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 /// An extension to format strings in *camel case*.
 extension String {
     /// A collection of all the words in the string by separating out any punctuation and spaces.
@@ -40,4 +41,14 @@ extension String {
         return NSLocalizedString(self, comment: self)
     }
     
+    func height(withConstrainedWidth width: CGFloat, _ font: UIFont?) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        if let font = font {
+            let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+            return ceil(boundingBox.height)
+        } else {
+            let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: nil, context: nil)
+            return ceil(boundingBox.height)
+        }
+    }
 }

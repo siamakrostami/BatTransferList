@@ -1,15 +1,15 @@
 //
-//  IntroViewController.swift
-//  Architecture
+//  TransferListViewController.swift
+//  BatTransferList
 //
-//  Created by Siamak on 4/17/23.
+//  Created by Siamak Rostami on 5/12/23.
 //
 
 import UIKit
 
-class IntroViewController: BaseViewController {
+class TransferListViewController: BaseViewController {
     
-    var viewModel: IntroViewModel?
+    var viewModel: TransferListViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +17,7 @@ class IntroViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func back(_ sender: Any) {
-        self.coordinator?.handleNavigation(style: .pop)
-    }
-    
+
     /*
     // MARK: - Navigation
 

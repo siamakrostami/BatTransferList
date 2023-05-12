@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 // MARK: - ViewModelProtocols
 
@@ -29,6 +30,6 @@ class BaseViewModel<DependenyType>: NSObject, ViewModelProtocols {
     typealias Dependency = DependenyType?
 
     var dependency: Dependency?
-    let disboseBag = Set<AnyCancellable>()
-    var error = CurrentValueSubject<Error?, Never>(nil)
+    var disboseBag = Set<AnyCancellable>()
+    var error = CurrentValueSubject<AFError?, Never>(nil)
 }

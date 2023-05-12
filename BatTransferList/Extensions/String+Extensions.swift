@@ -36,4 +36,8 @@ extension String {
         return self.words.map { $0.capitalized }.joined()
     }
     
+    func localized() -> String {
+        return NSLocalizedString(self, comment: self)
+    }
+    
 }

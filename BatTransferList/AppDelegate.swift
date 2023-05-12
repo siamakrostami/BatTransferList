@@ -7,6 +7,7 @@
 
 import Combine
 import UIKit
+import AlamofireEasyLogger
 
 // MARK: - AppDelegate
 
@@ -17,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: BaseCoordinator?
     var environment = AppEnvironment.setup()
     var window: UIWindow?
+    let alamofireLogger = FancyAppAlamofireLogger(prettyPrint: true) {
+        print($0)
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

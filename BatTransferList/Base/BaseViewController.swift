@@ -16,6 +16,7 @@ class BaseViewController: UIViewController, StoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bind()
+        self.hideKeyboardWhenTappedAround()
     }
     
     func bind() {}

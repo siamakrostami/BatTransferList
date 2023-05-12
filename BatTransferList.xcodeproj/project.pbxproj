@@ -15,9 +15,6 @@
 		019410302A0E26ED00BC7454 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410022A0E26EC00BC7454 /* NetworkRouter.swift */; };
 		019410312A0E26ED00BC7454 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410032A0E26EC00BC7454 /* Retrier.swift */; };
 		019410322A0E26ED00BC7454 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410042A0E26EC00BC7454 /* APIRequest.swift */; };
-		019410332A0E26ED00BC7454 /* AuthenticationRepositoriy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410062A0E26EC00BC7454 /* AuthenticationRepositoriy.swift */; };
-		019410342A0E26ED00BC7454 /* RegisterDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410082A0E26EC00BC7454 /* RegisterDomainModel.swift */; };
-		019410352A0E26ED00BC7454 /* RegistrationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194100A2A0E26EC00BC7454 /* RegistrationServices.swift */; };
 		019410362A0E26ED00BC7454 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194100B2A0E26EC00BC7454 /* NetworkServices.swift */; };
 		019410372A0E26ED00BC7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0194100C2A0E26EC00BC7454 /* Assets.xcassets */; };
 		019410382A0E26ED00BC7454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0194100D2A0E26EC00BC7454 /* LaunchScreen.storyboard */; };
@@ -25,19 +22,23 @@
 		0194103A2A0E26ED00BC7454 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410112A0E26EC00BC7454 /* String+Extensions.swift */; };
 		0194103B2A0E26ED00BC7454 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410122A0E26EC00BC7454 /* UINavigationController+Extension.swift */; };
 		0194103C2A0E26ED00BC7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410132A0E26EC00BC7454 /* AppDelegate.swift */; };
-		0194103D2A0E26ED00BC7454 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410172A0E26EC00BC7454 /* IntroViewModel.swift */; };
-		0194103E2A0E26ED00BC7454 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410192A0E26EC00BC7454 /* IntroCoordinator.swift */; };
-		0194103F2A0E26ED00BC7454 /* IntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0194101B2A0E26EC00BC7454 /* IntroViewController.storyboard */; };
-		019410402A0E26ED00BC7454 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194101C2A0E26EC00BC7454 /* IntroViewController.swift */; };
-		019410412A0E26ED00BC7454 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194101F2A0E26EC00BC7454 /* OnboardingViewModel.swift */; };
-		019410422A0E26ED00BC7454 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410212A0E26EC00BC7454 /* OnboardingCoordinator.swift */; };
-		019410432A0E26ED00BC7454 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410232A0E26EC00BC7454 /* OnboardingViewController.swift */; };
-		019410442A0E26ED00BC7454 /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019410242A0E26EC00BC7454 /* OnboardingViewController.storyboard */; };
 		019410462A0E26ED00BC7454 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410272A0E26EC00BC7454 /* BaseViewController.swift */; };
 		019410472A0E26ED00BC7454 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410282A0E26EC00BC7454 /* BaseViewModel.swift */; };
 		019410482A0E26ED00BC7454 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410292A0E26EC00BC7454 /* AppEnvironment.swift */; };
 		019410492A0E26ED00BC7454 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194102A2A0E26EC00BC7454 /* StoryboardInstantiable.swift */; };
 		0194104C2A0E290600BC7454 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0194104B2A0E290600BC7454 /* SDWebImage */; };
+		0194104E2A0E2A2400BC7454 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194104D2A0E2A2400BC7454 /* UIView+Extensions.swift */; };
+		019410512A0E2B3800BC7454 /* PlistHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410502A0E2B3800BC7454 /* PlistHelper.swift */; };
+		019410532A0E2C5E00BC7454 /* TransferListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410522A0E2C5E00BC7454 /* TransferListServices.swift */; };
+		019410552A0E2C9300BC7454 /* TransferListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410542A0E2C9300BC7454 /* TransferListModel.swift */; };
+		019410572A0E2CC800BC7454 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410562A0E2CC800BC7454 /* PersonModel.swift */; };
+		019410592A0E2CF100BC7454 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410582A0E2CF100BC7454 /* CardModel.swift */; };
+		0194105B2A0E2D1C00BC7454 /* MoreInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194105A2A0E2D1C00BC7454 /* MoreInfoModel.swift */; };
+		019410612A0E2FE300BC7454 /* TransferListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410602A0E2FE300BC7454 /* TransferListCoordinator.swift */; };
+		019410632A0E2FFB00BC7454 /* TransferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410622A0E2FFB00BC7454 /* TransferListViewModel.swift */; };
+		019410652A0E301B00BC7454 /* TransferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410642A0E301B00BC7454 /* TransferListViewController.swift */; };
+		019410672A0E310500BC7454 /* TransferListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019410662A0E310500BC7454 /* TransferListViewController.storyboard */; };
+		0194106A2A0E327600BC7454 /* AlamofireEasyLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 019410692A0E327600BC7454 /* AlamofireEasyLogger */; };
 		D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC178A29ED694A005800F4 /* Alamofire */; };
 		D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC179C29ED7BD2005800F4 /* Swime */; };
 /* End PBXBuildFile section */
@@ -51,9 +52,6 @@
 		019410022A0E26EC00BC7454 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		019410032A0E26EC00BC7454 /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
 		019410042A0E26EC00BC7454 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		019410062A0E26EC00BC7454 /* AuthenticationRepositoriy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRepositoriy.swift; sourceTree = "<group>"; };
-		019410082A0E26EC00BC7454 /* RegisterDomainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDomainModel.swift; sourceTree = "<group>"; };
-		0194100A2A0E26EC00BC7454 /* RegistrationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationServices.swift; sourceTree = "<group>"; };
 		0194100B2A0E26EC00BC7454 /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		0194100C2A0E26EC00BC7454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0194100E2A0E26EC00BC7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,19 +59,22 @@
 		019410112A0E26EC00BC7454 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		019410122A0E26EC00BC7454 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		019410132A0E26EC00BC7454 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		019410172A0E26EC00BC7454 /* IntroViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
-		019410192A0E26EC00BC7454 /* IntroCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
-		0194101B2A0E26EC00BC7454 /* IntroViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
-		0194101C2A0E26EC00BC7454 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		0194101F2A0E26EC00BC7454 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		019410212A0E26EC00BC7454 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
-		019410232A0E26EC00BC7454 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		019410242A0E26EC00BC7454 /* OnboardingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardingViewController.storyboard; sourceTree = "<group>"; };
 		019410252A0E26EC00BC7454 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		019410272A0E26EC00BC7454 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		019410282A0E26EC00BC7454 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		019410292A0E26EC00BC7454 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		0194102A2A0E26EC00BC7454 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		0194104D2A0E2A2400BC7454 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		019410502A0E2B3800BC7454 /* PlistHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistHelper.swift; sourceTree = "<group>"; };
+		019410522A0E2C5E00BC7454 /* TransferListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListServices.swift; sourceTree = "<group>"; };
+		019410542A0E2C9300BC7454 /* TransferListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListModel.swift; sourceTree = "<group>"; };
+		019410562A0E2CC800BC7454 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		019410582A0E2CF100BC7454 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		0194105A2A0E2D1C00BC7454 /* MoreInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoModel.swift; sourceTree = "<group>"; };
+		019410602A0E2FE300BC7454 /* TransferListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListCoordinator.swift; sourceTree = "<group>"; };
+		019410622A0E2FFB00BC7454 /* TransferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListViewModel.swift; sourceTree = "<group>"; };
+		019410642A0E301B00BC7454 /* TransferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListViewController.swift; sourceTree = "<group>"; };
+		019410662A0E310500BC7454 /* TransferListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferListViewController.storyboard; sourceTree = "<group>"; };
 		D5FC175B29ED68DB005800F4 /* BatTransferList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatTransferList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0194104C2A0E290600BC7454 /* SDWebImage in Frameworks */,
+				0194106A2A0E327600BC7454 /* AlamofireEasyLogger in Frameworks */,
 				D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */,
 				D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */,
 			);
@@ -100,6 +102,7 @@
 				0194100F2A0E26EC00BC7454 /* Extensions */,
 				019410142A0E26EC00BC7454 /* Controllers */,
 				01940FFF2A0E26EC00BC7454 /* Network */,
+				0194104F2A0E2B2500BC7454 /* Helper */,
 				0194100C2A0E26EC00BC7454 /* Assets.xcassets */,
 				0194100D2A0E26EC00BC7454 /* LaunchScreen.storyboard */,
 				019410132A0E26EC00BC7454 /* AppDelegate.swift */,
@@ -130,8 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				019410002A0E26EC00BC7454 /* Core */,
-				019410052A0E26EC00BC7454 /* Repositories */,
-				019410072A0E26EC00BC7454 /* Model */,
+				019410072A0E26EC00BC7454 /* Models */,
 				019410092A0E26EC00BC7454 /* Services */,
 			);
 			path = Network;
@@ -148,27 +150,22 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		019410052A0E26EC00BC7454 /* Repositories */ = {
+		019410072A0E26EC00BC7454 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				019410062A0E26EC00BC7454 /* AuthenticationRepositoriy.swift */,
+				019410542A0E2C9300BC7454 /* TransferListModel.swift */,
+				019410562A0E2CC800BC7454 /* PersonModel.swift */,
+				019410582A0E2CF100BC7454 /* CardModel.swift */,
+				0194105A2A0E2D1C00BC7454 /* MoreInfoModel.swift */,
 			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		019410072A0E26EC00BC7454 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				019410082A0E26EC00BC7454 /* RegisterDomainModel.swift */,
-			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		019410092A0E26EC00BC7454 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0194100A2A0E26EC00BC7454 /* RegistrationServices.swift */,
 				0194100B2A0E26EC00BC7454 /* NetworkServices.swift */,
+				019410522A0E2C5E00BC7454 /* TransferListServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -179,6 +176,7 @@
 				019410102A0E26EC00BC7454 /* UIViewController+Extensions.swift */,
 				019410112A0E26EC00BC7454 /* String+Extensions.swift */,
 				019410122A0E26EC00BC7454 /* UINavigationController+Extension.swift */,
+				0194104D2A0E2A2400BC7454 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,80 +184,9 @@
 		019410142A0E26EC00BC7454 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				019410152A0E26EC00BC7454 /* Intro */,
-				0194101D2A0E26EC00BC7454 /* Onboarding */,
+				0194105C2A0E2FAC00BC7454 /* TransferList */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		019410152A0E26EC00BC7454 /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-				019410162A0E26EC00BC7454 /* ViewModel */,
-				019410182A0E26EC00BC7454 /* Coordinator */,
-				0194101A2A0E26EC00BC7454 /* View */,
-			);
-			path = Intro;
-			sourceTree = "<group>";
-		};
-		019410162A0E26EC00BC7454 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				019410172A0E26EC00BC7454 /* IntroViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		019410182A0E26EC00BC7454 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				019410192A0E26EC00BC7454 /* IntroCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		0194101A2A0E26EC00BC7454 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0194101B2A0E26EC00BC7454 /* IntroViewController.storyboard */,
-				0194101C2A0E26EC00BC7454 /* IntroViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0194101D2A0E26EC00BC7454 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				0194101E2A0E26EC00BC7454 /* ViewModel */,
-				019410202A0E26EC00BC7454 /* Coordinator */,
-				019410222A0E26EC00BC7454 /* View */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		0194101E2A0E26EC00BC7454 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0194101F2A0E26EC00BC7454 /* OnboardingViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		019410202A0E26EC00BC7454 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				019410212A0E26EC00BC7454 /* OnboardingCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		019410222A0E26EC00BC7454 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				019410232A0E26EC00BC7454 /* OnboardingViewController.swift */,
-				019410242A0E26EC00BC7454 /* OnboardingViewController.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		019410262A0E26EC00BC7454 /* Base */ = {
@@ -271,6 +198,49 @@
 				0194102A2A0E26EC00BC7454 /* StoryboardInstantiable.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		0194104F2A0E2B2500BC7454 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				019410502A0E2B3800BC7454 /* PlistHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0194105C2A0E2FAC00BC7454 /* TransferList */ = {
+			isa = PBXGroup;
+			children = (
+				0194105F2A0E2FC800BC7454 /* Coordinator */,
+				0194105E2A0E2FBF00BC7454 /* ViewModel */,
+				0194105D2A0E2FB900BC7454 /* View */,
+			);
+			path = TransferList;
+			sourceTree = "<group>";
+		};
+		0194105D2A0E2FB900BC7454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				019410642A0E301B00BC7454 /* TransferListViewController.swift */,
+				019410662A0E310500BC7454 /* TransferListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0194105E2A0E2FBF00BC7454 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				019410622A0E2FFB00BC7454 /* TransferListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0194105F2A0E2FC800BC7454 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				019410602A0E2FE300BC7454 /* TransferListCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D5FC175229ED68DB005800F4 = {
@@ -309,6 +279,7 @@
 				D5FC178A29ED694A005800F4 /* Alamofire */,
 				D5FC179C29ED7BD2005800F4 /* Swime */,
 				0194104B2A0E290600BC7454 /* SDWebImage */,
+				019410692A0E327600BC7454 /* AlamofireEasyLogger */,
 			);
 			productName = Architecture;
 			productReference = D5FC175B29ED68DB005800F4 /* BatTransferList.app */;
@@ -342,6 +313,7 @@
 				D5FC178929ED694A005800F4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D5FC179B29ED7BD2005800F4 /* XCRemoteSwiftPackageReference "Swime" */,
 				0194104A2A0E290600BC7454 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */,
 			);
 			productRefGroup = D5FC175C29ED68DB005800F4 /* Products */;
 			projectDirPath = "";
@@ -357,8 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0194103F2A0E26ED00BC7454 /* IntroViewController.storyboard in Resources */,
-				019410442A0E26ED00BC7454 /* OnboardingViewController.storyboard in Resources */,
+				019410672A0E310500BC7454 /* TransferListViewController.storyboard in Resources */,
 				019410382A0E26ED00BC7454 /* LaunchScreen.storyboard in Resources */,
 				019410372A0E26ED00BC7454 /* Assets.xcassets in Resources */,
 			);
@@ -371,30 +342,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019410402A0E26ED00BC7454 /* IntroViewController.swift in Sources */,
-				019410332A0E26ED00BC7454 /* AuthenticationRepositoriy.swift in Sources */,
 				0194102D2A0E26ED00BC7454 /* DependencyContainer.swift in Sources */,
 				0194102F2A0E26ED00BC7454 /* RequestHeaderBuilder.swift in Sources */,
-				0194103D2A0E26ED00BC7454 /* IntroViewModel.swift in Sources */,
-				019410352A0E26ED00BC7454 /* RegistrationServices.swift in Sources */,
+				019410632A0E2FFB00BC7454 /* TransferListViewModel.swift in Sources */,
 				019410362A0E26ED00BC7454 /* NetworkServices.swift in Sources */,
-				019410422A0E26ED00BC7454 /* OnboardingCoordinator.swift in Sources */,
 				019410462A0E26ED00BC7454 /* BaseViewController.swift in Sources */,
 				019410312A0E26ED00BC7454 /* Retrier.swift in Sources */,
 				019410322A0E26ED00BC7454 /* APIRequest.swift in Sources */,
 				0194103C2A0E26ED00BC7454 /* AppDelegate.swift in Sources */,
+				019410552A0E2C9300BC7454 /* TransferListModel.swift in Sources */,
+				019410512A0E2B3800BC7454 /* PlistHelper.swift in Sources */,
+				0194104E2A0E2A2400BC7454 /* UIView+Extensions.swift in Sources */,
 				0194103A2A0E26ED00BC7454 /* String+Extensions.swift in Sources */,
-				0194103E2A0E26ED00BC7454 /* IntroCoordinator.swift in Sources */,
 				019410472A0E26ED00BC7454 /* BaseViewModel.swift in Sources */,
+				019410572A0E2CC800BC7454 /* PersonModel.swift in Sources */,
 				0194102C2A0E26ED00BC7454 /* ApplicationDataContainer.swift in Sources */,
+				019410612A0E2FE300BC7454 /* TransferListCoordinator.swift in Sources */,
 				0194102B2A0E26ED00BC7454 /* BaseCoordinator.swift in Sources */,
+				019410592A0E2CF100BC7454 /* CardModel.swift in Sources */,
 				019410392A0E26ED00BC7454 /* UIViewController+Extensions.swift in Sources */,
-				019410342A0E26ED00BC7454 /* RegisterDomainModel.swift in Sources */,
+				0194105B2A0E2D1C00BC7454 /* MoreInfoModel.swift in Sources */,
 				019410492A0E26ED00BC7454 /* StoryboardInstantiable.swift in Sources */,
 				0194102E2A0E26ED00BC7454 /* ApplicationFlow.swift in Sources */,
-				019410412A0E26ED00BC7454 /* OnboardingViewModel.swift in Sources */,
+				019410532A0E2C5E00BC7454 /* TransferListServices.swift in Sources */,
+				019410652A0E301B00BC7454 /* TransferListViewController.swift in Sources */,
 				019410302A0E26ED00BC7454 /* NetworkRouter.swift in Sources */,
-				019410432A0E26ED00BC7454 /* OnboardingViewController.swift in Sources */,
 				0194103B2A0E26ED00BC7454 /* UINavigationController+Extension.swift in Sources */,
 				019410482A0E26ED00BC7454 /* AppEnvironment.swift in Sources */,
 			);
@@ -624,6 +596,14 @@
 				minimumVersion = 5.9.0;
 			};
 		};
+		019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/strvcom/AlamofireEasyLogger";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D5FC178929ED694A005800F4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -647,6 +627,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0194104A2A0E290600BC7454 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		019410692A0E327600BC7454 /* AlamofireEasyLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */;
+			productName = AlamofireEasyLogger;
 		};
 		D5FC178A29ED694A005800F4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -18,5 +18,6 @@ struct NetworkServices {
     }
     
     // MARK: - Internal
-    lazy var authenticationRepository: AuthenticationRepository? = .init(apiRrequest: self.apiRrequest)
+
+    lazy var transferListServices: TransferListServices? = .init(apiRequest: apiRrequest)
 }

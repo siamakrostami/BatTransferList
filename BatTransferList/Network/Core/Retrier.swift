@@ -28,11 +28,13 @@ class NetworkRetrier: RequestRetrier {
             return
         }
         switch statusCode {
-        case 401:
+        case 401,403,500:
             // Refresh your token
             completion(.retry)
+        case 200...299:
+            completion(.doNotRetry)
         default:
-            completion(.retry)
+            completion(.doNotRetry)
         }
     }
 

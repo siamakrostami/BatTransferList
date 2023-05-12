@@ -21,7 +21,7 @@ class APIRequest {
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
         config.timeoutIntervalForRequest = 30
         config.timeoutIntervalForResource = 30
-        self.sessionManager = Session(configuration: config, interceptor: Interceptor(adapter: NetworkAdapter(), retrier: NetworkRetrier(limit: 2, delay: 30)))
+        self.sessionManager = Session(configuration: config, interceptor: Interceptor(adapter: NetworkAdapter(), retrier: NetworkRetrier(limit: 1, delay: 30)))
     }
     
     deinit{
@@ -67,7 +67,7 @@ extension APIRequest: APIRequestProtocols {
     func request<T>(_ endpoint: URLRequestConvertible) -> AnyPublisher<T, AFError> where T: Decodable, T: Encodable {
         do {
             let urlRequest = try endpoint.asURLRequest()
-            let request = sessionManager.request(urlRequest, interceptor: Interceptor(adapter: NetworkAdapter(), retrier: NetworkRetrier(limit: 2, delay: 30)))
+            let request = sessionManager.request(urlRequest)
             return request
                 .validate()
                 .publishDecodable(type: T.self)

@@ -5,14 +5,15 @@
 //  Created by Siamak Rostami on 5/12/23.
 //
 
-import Foundation
 import Combine
+import Foundation
+
+// MARK: - TransferListViewModel
 
 class TransferListViewModel: BaseViewModel<DependencyContainer> {
-    
-    var container: DependencyContainer
-    
-    init(dependency: DependencyContainer){
+    // MARK: Lifecycle
+
+    init(dependency: DependencyContainer) {
         self.container = dependency
         super.init(dependency: self.container)
         getTransferList()
@@ -21,31 +22,69 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
     required init(dependency: Dependency) {
         fatalError("init(dependency:) has not been implemented")
     }
+
+    // MARK: Internal
+
+    var container: DependencyContainer
     
     var currentPage: Int = 1
-    var transferList = CurrentValueSubject<[TransferListModel]?,Never>(nil)
-
+    var transferList = CurrentValueSubject<[TransferListModel]?, Never>(nil)
+    var shouldRealodTable = CurrentValueSubject<Bool?,Never>(nil)
 }
 
 extension TransferListViewModel {
     
-    func getTransferList(){
+    func reloadData(){
+        self.currentPage = 1
+        self.getTransferList()
+    }
+    
+    func handlePagination(index: Int){
+        guard let model = self.transferList.value else {return}
+        if index == model.count - 1 {
+            if self.currentPage <= 3 {
+                self.currentPage += 1
+                self.getTransferList()
+            }
+        }
+    }
+ 
+    func getTransferList() {
+        if self.currentPage == 1 {
+            self.transferList.send(nil)
+            self.shouldRealodTable.send(true)
+        }
         self.container.networkServices.transferListServices?
             .getTransferList(page: self.currentPage)
             .subscribe(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
-                switch completion{
+                switch completion {
                 case .failure(let error):
                     self?.error.send(error)
                 default:
                     break
                 }
             }, receiveValue: { [weak self] model in
-                self?.transferList.send(model)
+                debugPrint(model)
+                self?.createTransferArrayFromModel(model: model)
+                self?.shouldRealodTable.send(true)
+
             })
             .store(in: &self.disboseBag)
-  
     }
-  
+    
+    private func createTransferArrayFromModel(model: [TransferListModel]?) {
+        guard let model = model else {
+            self.transferList.send(nil)
+            self.shouldRealodTable.send(true)
+            return
+        }
+        if self.transferList.value == nil {
+            self.transferList.send(.init())
+        }
+        model.forEach {
+            self.transferList.value?.append($0)
+        }
+        
+    }
 }
-

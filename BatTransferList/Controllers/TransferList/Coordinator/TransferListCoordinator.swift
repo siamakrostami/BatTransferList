@@ -10,6 +10,7 @@ import UIKit
 
 extension BaseCoordinator {
     
+    //MARK: - Set transfer list as root controller
     func setTransferListAsRoot(dependency: DependencyContainer) -> UIViewController {
         let controller = TransferListViewController.instantiateViewController()
         controller.viewModel = .init(dependency: dependency)
@@ -17,6 +18,7 @@ extension BaseCoordinator {
         return controller
     }
     
+    //MARK: - Navigate from another controller to the transfer list controller
     func openTransferList(dependency: DependencyContainer) {
         let controller = TransferListViewController.instantiateViewController()
         controller.viewModel = .init(dependency: dependency)

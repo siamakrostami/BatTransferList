@@ -39,6 +39,8 @@
 		019410652A0E301B00BC7454 /* TransferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410642A0E301B00BC7454 /* TransferListViewController.swift */; };
 		019410672A0E310500BC7454 /* TransferListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019410662A0E310500BC7454 /* TransferListViewController.storyboard */; };
 		0194106A2A0E327600BC7454 /* AlamofireEasyLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 019410692A0E327600BC7454 /* AlamofireEasyLogger */; };
+		019410712A0E3B7300BC7454 /* TransferListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */; };
+		019410722A0E3B7300BC7454 /* TransferListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019410702A0E3B7300BC7454 /* TransferListTVC.xib */; };
 		D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC178A29ED694A005800F4 /* Alamofire */; };
 		D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC179C29ED7BD2005800F4 /* Swime */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		019410622A0E2FFB00BC7454 /* TransferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListViewModel.swift; sourceTree = "<group>"; };
 		019410642A0E301B00BC7454 /* TransferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListViewController.swift; sourceTree = "<group>"; };
 		019410662A0E310500BC7454 /* TransferListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferListViewController.storyboard; sourceTree = "<group>"; };
+		0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListTVC.swift; sourceTree = "<group>"; };
+		019410702A0E3B7300BC7454 /* TransferListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferListTVC.xib; sourceTree = "<group>"; };
 		D5FC175B29ED68DB005800F4 /* BatTransferList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatTransferList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,14 +100,14 @@
 		01940FF82A0E26EC00BC7454 /* BatTransferList */ = {
 			isa = PBXGroup;
 			children = (
+				0194106B2A0E347700BC7454 /* Assets */,
 				01940FF92A0E26EC00BC7454 /* Coordinator */,
 				019410262A0E26EC00BC7454 /* Base */,
 				01940FFB2A0E26EC00BC7454 /* DI */,
 				0194100F2A0E26EC00BC7454 /* Extensions */,
-				019410142A0E26EC00BC7454 /* Controllers */,
 				01940FFF2A0E26EC00BC7454 /* Network */,
 				0194104F2A0E2B2500BC7454 /* Helper */,
-				0194100C2A0E26EC00BC7454 /* Assets.xcassets */,
+				019410142A0E26EC00BC7454 /* Controllers */,
 				0194100D2A0E26EC00BC7454 /* LaunchScreen.storyboard */,
 				019410132A0E26EC00BC7454 /* AppDelegate.swift */,
 				019410252A0E26EC00BC7454 /* Info.plist */,
@@ -211,6 +215,7 @@
 		0194105C2A0E2FAC00BC7454 /* TransferList */ = {
 			isa = PBXGroup;
 			children = (
+				0194106C2A0E3B3E00BC7454 /* XIB */,
 				0194105F2A0E2FC800BC7454 /* Coordinator */,
 				0194105E2A0E2FBF00BC7454 /* ViewModel */,
 				0194105D2A0E2FB900BC7454 /* View */,
@@ -241,6 +246,23 @@
 				019410602A0E2FE300BC7454 /* TransferListCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0194106B2A0E347700BC7454 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0194100C2A0E26EC00BC7454 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0194106C2A0E3B3E00BC7454 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */,
+				019410702A0E3B7300BC7454 /* TransferListTVC.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		D5FC175229ED68DB005800F4 = {
@@ -331,6 +353,7 @@
 			files = (
 				019410672A0E310500BC7454 /* TransferListViewController.storyboard in Resources */,
 				019410382A0E26ED00BC7454 /* LaunchScreen.storyboard in Resources */,
+				019410722A0E3B7300BC7454 /* TransferListTVC.xib in Resources */,
 				019410372A0E26ED00BC7454 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +379,7 @@
 				0194103A2A0E26ED00BC7454 /* String+Extensions.swift in Sources */,
 				019410472A0E26ED00BC7454 /* BaseViewModel.swift in Sources */,
 				019410572A0E2CC800BC7454 /* PersonModel.swift in Sources */,
+				019410712A0E3B7300BC7454 /* TransferListTVC.swift in Sources */,
 				0194102C2A0E26ED00BC7454 /* ApplicationDataContainer.swift in Sources */,
 				019410612A0E2FE300BC7454 /* TransferListCoordinator.swift in Sources */,
 				0194102B2A0E26ED00BC7454 /* BaseCoordinator.swift in Sources */,

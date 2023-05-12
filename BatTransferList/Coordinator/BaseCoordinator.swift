@@ -87,10 +87,9 @@ final class BaseCoordinator: NSObject {
     private func currentFlowViewController(flow: ApplicationFlow, dependency: DependencyContainer) -> UIViewController? {
         switch flow {
         case .TransferList:
-            break
+            return self.setTransferListAsRoot(dependency: dependency)
         case .TransferDetail:
-            break
+            return nil
         }
-        return nil
     }
 }

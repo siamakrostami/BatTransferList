@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017A82102A0E82F800EB3BD0 /* PersonalTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A820E2A0E82F800EB3BD0 /* PersonalTVC.swift */; };
+		017A82112A0E82F800EB3BD0 /* PersonalTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A820F2A0E82F800EB3BD0 /* PersonalTVC.xib */; };
+		017A82152A0E831400EB3BD0 /* CardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A82132A0E831400EB3BD0 /* CardTVC.swift */; };
+		017A82162A0E831400EB3BD0 /* CardTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A82142A0E831400EB3BD0 /* CardTVC.xib */; };
+		017A82192A0E832200EB3BD0 /* TransferTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A82172A0E832200EB3BD0 /* TransferTVC.swift */; };
+		017A821A2A0E832200EB3BD0 /* TransferTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A82182A0E832200EB3BD0 /* TransferTVC.xib */; };
+		017A821D2A0E833300EB3BD0 /* NoteTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A821B2A0E833300EB3BD0 /* NoteTVC.swift */; };
+		017A821E2A0E833300EB3BD0 /* NoteTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A821C2A0E833300EB3BD0 /* NoteTVC.xib */; };
+		017A82212A0E834100EB3BD0 /* HeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A821F2A0E834100EB3BD0 /* HeaderTVC.swift */; };
+		017A82222A0E834100EB3BD0 /* HeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A82202A0E834100EB3BD0 /* HeaderTVC.xib */; };
+		017A82242A0E916300EB3BD0 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A82232A0E916300EB3BD0 /* UITableView+Extensions.swift */; };
 		0194102B2A0E26ED00BC7454 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01940FFA2A0E26EC00BC7454 /* BaseCoordinator.swift */; };
 		0194102C2A0E26ED00BC7454 /* ApplicationDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01940FFC2A0E26EC00BC7454 /* ApplicationDataContainer.swift */; };
 		0194102D2A0E26ED00BC7454 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01940FFD2A0E26EC00BC7454 /* DependencyContainer.swift */; };
@@ -41,11 +52,26 @@
 		0194106A2A0E327600BC7454 /* AlamofireEasyLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 019410692A0E327600BC7454 /* AlamofireEasyLogger */; };
 		019410712A0E3B7300BC7454 /* TransferListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */; };
 		019410722A0E3B7300BC7454 /* TransferListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019410702A0E3B7300BC7454 /* TransferListTVC.xib */; };
+		019410782A0E78F000BC7454 /* TransferDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410772A0E78F000BC7454 /* TransferDetailCoordinator.swift */; };
+		0194107A2A0E792200BC7454 /* TransferDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410792A0E792200BC7454 /* TransferDetailViewModel.swift */; };
+		0194107C2A0E793800BC7454 /* TransferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194107B2A0E793800BC7454 /* TransferDetailViewController.swift */; };
+		0194107E2A0E794600BC7454 /* TransferDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0194107D2A0E794600BC7454 /* TransferDetailViewController.storyboard */; };
 		D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC178A29ED694A005800F4 /* Alamofire */; };
 		D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC179C29ED7BD2005800F4 /* Swime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017A820E2A0E82F800EB3BD0 /* PersonalTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTVC.swift; sourceTree = "<group>"; };
+		017A820F2A0E82F800EB3BD0 /* PersonalTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalTVC.xib; sourceTree = "<group>"; };
+		017A82132A0E831400EB3BD0 /* CardTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTVC.swift; sourceTree = "<group>"; };
+		017A82142A0E831400EB3BD0 /* CardTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTVC.xib; sourceTree = "<group>"; };
+		017A82172A0E832200EB3BD0 /* TransferTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTVC.swift; sourceTree = "<group>"; };
+		017A82182A0E832200EB3BD0 /* TransferTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferTVC.xib; sourceTree = "<group>"; };
+		017A821B2A0E833300EB3BD0 /* NoteTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTVC.swift; sourceTree = "<group>"; };
+		017A821C2A0E833300EB3BD0 /* NoteTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTVC.xib; sourceTree = "<group>"; };
+		017A821F2A0E834100EB3BD0 /* HeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTVC.swift; sourceTree = "<group>"; };
+		017A82202A0E834100EB3BD0 /* HeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTVC.xib; sourceTree = "<group>"; };
+		017A82232A0E916300EB3BD0 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		01940FFA2A0E26EC00BC7454 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		01940FFC2A0E26EC00BC7454 /* ApplicationDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDataContainer.swift; sourceTree = "<group>"; };
 		01940FFD2A0E26EC00BC7454 /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -79,6 +105,10 @@
 		019410662A0E310500BC7454 /* TransferListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferListViewController.storyboard; sourceTree = "<group>"; };
 		0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListTVC.swift; sourceTree = "<group>"; };
 		019410702A0E3B7300BC7454 /* TransferListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferListTVC.xib; sourceTree = "<group>"; };
+		019410772A0E78F000BC7454 /* TransferDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailCoordinator.swift; sourceTree = "<group>"; };
+		019410792A0E792200BC7454 /* TransferDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailViewModel.swift; sourceTree = "<group>"; };
+		0194107B2A0E793800BC7454 /* TransferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailViewController.swift; sourceTree = "<group>"; };
+		0194107D2A0E794600BC7454 /* TransferDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferDetailViewController.storyboard; sourceTree = "<group>"; };
 		D5FC175B29ED68DB005800F4 /* BatTransferList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatTransferList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +127,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		017A82082A0E828000EB3BD0 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				017A820D2A0E82DE00EB3BD0 /* Header */,
+				017A820C2A0E82A200EB3BD0 /* Note */,
+				017A820B2A0E829B00EB3BD0 /* Transfer */,
+				017A820A2A0E829300EB3BD0 /* Card */,
+				017A82092A0E828B00EB3BD0 /* Personal */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		017A82092A0E828B00EB3BD0 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				017A820E2A0E82F800EB3BD0 /* PersonalTVC.swift */,
+				017A820F2A0E82F800EB3BD0 /* PersonalTVC.xib */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		017A820A2A0E829300EB3BD0 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				017A82132A0E831400EB3BD0 /* CardTVC.swift */,
+				017A82142A0E831400EB3BD0 /* CardTVC.xib */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		017A820B2A0E829B00EB3BD0 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				017A82172A0E832200EB3BD0 /* TransferTVC.swift */,
+				017A82182A0E832200EB3BD0 /* TransferTVC.xib */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		017A820C2A0E82A200EB3BD0 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				017A821B2A0E833300EB3BD0 /* NoteTVC.swift */,
+				017A821C2A0E833300EB3BD0 /* NoteTVC.xib */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		017A820D2A0E82DE00EB3BD0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				017A821F2A0E834100EB3BD0 /* HeaderTVC.swift */,
+				017A82202A0E834100EB3BD0 /* HeaderTVC.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		01940FF82A0E26EC00BC7454 /* BatTransferList */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +268,7 @@
 				019410112A0E26EC00BC7454 /* String+Extensions.swift */,
 				019410122A0E26EC00BC7454 /* UINavigationController+Extension.swift */,
 				0194104D2A0E2A2400BC7454 /* UIView+Extensions.swift */,
+				017A82232A0E916300EB3BD0 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +276,7 @@
 		019410142A0E26EC00BC7454 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				019410732A0E78B500BC7454 /* TransferDetail */,
 				0194105C2A0E2FAC00BC7454 /* TransferList */,
 			);
 			path = Controllers;
@@ -263,6 +352,42 @@
 				019410702A0E3B7300BC7454 /* TransferListTVC.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		019410732A0E78B500BC7454 /* TransferDetail */ = {
+			isa = PBXGroup;
+			children = (
+				017A82082A0E828000EB3BD0 /* XIB */,
+				019410762A0E78D900BC7454 /* Coordinator */,
+				019410752A0E78C500BC7454 /* ViewModel */,
+				019410742A0E78BF00BC7454 /* View */,
+			);
+			path = TransferDetail;
+			sourceTree = "<group>";
+		};
+		019410742A0E78BF00BC7454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0194107B2A0E793800BC7454 /* TransferDetailViewController.swift */,
+				0194107D2A0E794600BC7454 /* TransferDetailViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		019410752A0E78C500BC7454 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				019410792A0E792200BC7454 /* TransferDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		019410762A0E78D900BC7454 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				019410772A0E78F000BC7454 /* TransferDetailCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D5FC175229ED68DB005800F4 = {
@@ -353,8 +478,14 @@
 			files = (
 				019410672A0E310500BC7454 /* TransferListViewController.storyboard in Resources */,
 				019410382A0E26ED00BC7454 /* LaunchScreen.storyboard in Resources */,
+				017A821A2A0E832200EB3BD0 /* TransferTVC.xib in Resources */,
 				019410722A0E3B7300BC7454 /* TransferListTVC.xib in Resources */,
 				019410372A0E26ED00BC7454 /* Assets.xcassets in Resources */,
+				017A82162A0E831400EB3BD0 /* CardTVC.xib in Resources */,
+				017A821E2A0E833300EB3BD0 /* NoteTVC.xib in Resources */,
+				0194107E2A0E794600BC7454 /* TransferDetailViewController.storyboard in Resources */,
+				017A82222A0E834100EB3BD0 /* HeaderTVC.xib in Resources */,
+				017A82112A0E82F800EB3BD0 /* PersonalTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019410782A0E78F000BC7454 /* TransferDetailCoordinator.swift in Sources */,
 				0194102D2A0E26ED00BC7454 /* DependencyContainer.swift in Sources */,
 				0194102F2A0E26ED00BC7454 /* RequestHeaderBuilder.swift in Sources */,
 				019410632A0E2FFB00BC7454 /* TransferListViewModel.swift in Sources */,
@@ -374,14 +506,17 @@
 				019410322A0E26ED00BC7454 /* APIRequest.swift in Sources */,
 				0194103C2A0E26ED00BC7454 /* AppDelegate.swift in Sources */,
 				019410552A0E2C9300BC7454 /* TransferListModel.swift in Sources */,
+				0194107A2A0E792200BC7454 /* TransferDetailViewModel.swift in Sources */,
 				019410512A0E2B3800BC7454 /* PlistHelper.swift in Sources */,
 				0194104E2A0E2A2400BC7454 /* UIView+Extensions.swift in Sources */,
 				0194103A2A0E26ED00BC7454 /* String+Extensions.swift in Sources */,
+				017A82192A0E832200EB3BD0 /* TransferTVC.swift in Sources */,
 				019410472A0E26ED00BC7454 /* BaseViewModel.swift in Sources */,
 				019410572A0E2CC800BC7454 /* PersonModel.swift in Sources */,
 				019410712A0E3B7300BC7454 /* TransferListTVC.swift in Sources */,
 				0194102C2A0E26ED00BC7454 /* ApplicationDataContainer.swift in Sources */,
 				019410612A0E2FE300BC7454 /* TransferListCoordinator.swift in Sources */,
+				017A82212A0E834100EB3BD0 /* HeaderTVC.swift in Sources */,
 				0194102B2A0E26ED00BC7454 /* BaseCoordinator.swift in Sources */,
 				019410592A0E2CF100BC7454 /* CardModel.swift in Sources */,
 				019410392A0E26ED00BC7454 /* UIViewController+Extensions.swift in Sources */,
@@ -390,7 +525,12 @@
 				0194102E2A0E26ED00BC7454 /* ApplicationFlow.swift in Sources */,
 				019410532A0E2C5E00BC7454 /* TransferListServices.swift in Sources */,
 				019410652A0E301B00BC7454 /* TransferListViewController.swift in Sources */,
+				0194107C2A0E793800BC7454 /* TransferDetailViewController.swift in Sources */,
+				017A82152A0E831400EB3BD0 /* CardTVC.swift in Sources */,
 				019410302A0E26ED00BC7454 /* NetworkRouter.swift in Sources */,
+				017A821D2A0E833300EB3BD0 /* NoteTVC.swift in Sources */,
+				017A82242A0E916300EB3BD0 /* UITableView+Extensions.swift in Sources */,
+				017A82102A0E82F800EB3BD0 /* PersonalTVC.swift in Sources */,
 				0194103B2A0E26ED00BC7454 /* UINavigationController+Extension.swift in Sources */,
 				019410482A0E26ED00BC7454 /* AppEnvironment.swift in Sources */,
 			);

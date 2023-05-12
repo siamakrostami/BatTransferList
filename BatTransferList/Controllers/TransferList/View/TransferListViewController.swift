@@ -82,6 +82,11 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard viewModel.transferList.value != nil else {
+            tableView.setEmptyState(message: "Transfer List Is Empty",image: "batman-waiting", font: .systemFont(ofSize: 16,weight: .semibold), alignment: .center)
+            return 0
+        }
+        tableView.restore()
         return viewModel.transferList.value?.count ?? 0
     }
     
@@ -101,6 +106,11 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewModel.handlePagination(index: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = viewModel.transferList.value?[indexPath.row] else {return}
+        coordinator?.openTransferDetail(dependency: self.viewModel.container, model: model)
     }
     
 }

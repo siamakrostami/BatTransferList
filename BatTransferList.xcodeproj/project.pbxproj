@@ -96,14 +96,14 @@
 		01940FF82A0E26EC00BC7454 /* BatTransferList */ = {
 			isa = PBXGroup;
 			children = (
+				0194106B2A0E347700BC7454 /* Assets */,
 				01940FF92A0E26EC00BC7454 /* Coordinator */,
 				019410262A0E26EC00BC7454 /* Base */,
 				01940FFB2A0E26EC00BC7454 /* DI */,
 				0194100F2A0E26EC00BC7454 /* Extensions */,
-				019410142A0E26EC00BC7454 /* Controllers */,
 				01940FFF2A0E26EC00BC7454 /* Network */,
 				0194104F2A0E2B2500BC7454 /* Helper */,
-				0194100C2A0E26EC00BC7454 /* Assets.xcassets */,
+				019410142A0E26EC00BC7454 /* Controllers */,
 				0194100D2A0E26EC00BC7454 /* LaunchScreen.storyboard */,
 				019410132A0E26EC00BC7454 /* AppDelegate.swift */,
 				019410252A0E26EC00BC7454 /* Info.plist */,
@@ -241,6 +241,14 @@
 				019410602A0E2FE300BC7454 /* TransferListCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0194106B2A0E347700BC7454 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0194100C2A0E26EC00BC7454 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		D5FC175229ED68DB005800F4 = {

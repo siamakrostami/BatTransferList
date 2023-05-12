@@ -29,12 +29,30 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
     
     var currentPage: Int = 1
     var transferList = CurrentValueSubject<[TransferListModel]?, Never>(nil)
+    var shouldRealodTable = CurrentValueSubject<Bool?,Never>(nil)
 }
 
 extension TransferListViewModel {
+    
+    func reloadData(){
+        self.currentPage = 1
+        self.getTransferList()
+    }
+    
+    func handlePagination(index: Int){
+        guard let model = self.transferList.value else {return}
+        if index == model.count - 1 {
+            if self.currentPage <= 3 {
+                self.currentPage += 1
+                self.getTransferList()
+            }
+        }
+    }
+ 
     func getTransferList() {
         if self.currentPage == 1 {
             self.transferList.send(nil)
+            self.shouldRealodTable.send(true)
         }
         self.container.networkServices.transferListServices?
             .getTransferList(page: self.currentPage)
@@ -47,7 +65,9 @@ extension TransferListViewModel {
                     break
                 }
             }, receiveValue: { [weak self] model in
+                debugPrint(model)
                 self?.createTransferArrayFromModel(model: model)
+                self?.shouldRealodTable.send(true)
 
             })
             .store(in: &self.disboseBag)
@@ -56,6 +76,7 @@ extension TransferListViewModel {
     private func createTransferArrayFromModel(model: [TransferListModel]?) {
         guard let model = model else {
             self.transferList.send(nil)
+            self.shouldRealodTable.send(true)
             return
         }
         if self.transferList.value == nil {
@@ -64,5 +85,6 @@ extension TransferListViewModel {
         model.forEach {
             self.transferList.value?.append($0)
         }
+        
     }
 }

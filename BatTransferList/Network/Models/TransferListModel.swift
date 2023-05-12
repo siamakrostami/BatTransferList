@@ -11,7 +11,7 @@ import Foundation
 struct TransferListModel: Codable {
     var person: PersonModel?
     var card: CardModel?
-    var lastTransfer: Date?
+    var lastTransfer: String?
     var note: String?
     var moreInfo: MoreInfoModel?
 

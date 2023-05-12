@@ -10,7 +10,7 @@ import Alamofire
 import Combine
 
 protocol TransferListServicesProtocols {
-    func getTransferList(page: Int) -> AnyPublisher<[TransferListModel]?,AFError>
+    func getTransferList(page: Int) -> AnyPublisher<[TransferListModel],AFError>
 }
 
 class TransferListServices {
@@ -60,7 +60,7 @@ extension TransferListServices {
     
 }
 extension TransferListServices: TransferListServicesProtocols {
-    func getTransferList(page: Int) -> AnyPublisher<[TransferListModel]?, Alamofire.AFError> {
+    func getTransferList(page: Int) -> AnyPublisher<[TransferListModel], Alamofire.AFError> {
         self.apiRequest.request(TransferRouter.getTransferList(page: page))
     }
     

@@ -36,16 +36,28 @@
                                     <constraint firstItem="FHV-hd-CUJ" firstAttribute="height" secondItem="JuM-b2-uDK" secondAttribute="height" id="ynf-7P-JFL"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wrq-mQ-kYD">
+                                <rect key="frame" x="16" y="123" width="398" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JuM-b2-uDK" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="1OA-vg-xLQ"/>
+                            <constraint firstItem="wrq-mQ-kYD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2Hs-8g-iUh"/>
+                            <constraint firstItem="wrq-mQ-kYD" firstAttribute="centerX" secondItem="JuM-b2-uDK" secondAttribute="centerX" id="3YA-HL-HPe"/>
                             <constraint firstItem="JuM-b2-uDK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7CW-wH-0NH"/>
+                            <constraint firstItem="wrq-mQ-kYD" firstAttribute="top" secondItem="JuM-b2-uDK" secondAttribute="bottom" constant="16" id="7Kp-Aj-b8y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wrq-mQ-kYD" secondAttribute="trailing" constant="16" id="LO9-qj-FBU"/>
                             <constraint firstItem="JuM-b2-uDK" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Tdr-XF-Tr2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wrq-mQ-kYD" secondAttribute="bottom" constant="16" id="nje-cE-FBN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Bcv-Kq-cJf"/>
+                    <connections>
+                        <outlet property="transferTableView" destination="wrq-mQ-kYD" id="Jfu-EF-LmO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

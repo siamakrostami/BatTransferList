@@ -58,6 +58,10 @@
 		0194107A2A0E792200BC7454 /* TransferDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410792A0E792200BC7454 /* TransferDetailViewModel.swift */; };
 		0194107C2A0E793800BC7454 /* TransferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194107B2A0E793800BC7454 /* TransferDetailViewController.swift */; };
 		0194107E2A0E794600BC7454 /* TransferDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0194107D2A0E794600BC7454 /* TransferDetailViewController.storyboard */; };
+		D574EEC92A0F75B700C208AA /* FavoriteContainerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574EEC72A0F75B700C208AA /* FavoriteContainerTVC.swift */; };
+		D574EECA2A0F75B700C208AA /* FavoriteContainerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D574EEC82A0F75B700C208AA /* FavoriteContainerTVC.xib */; };
+		D574EECD2A0F763A00C208AA /* FavoritesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574EECB2A0F763A00C208AA /* FavoritesCVC.swift */; };
+		D574EECE2A0F763A00C208AA /* FavoritesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D574EECC2A0F763A00C208AA /* FavoritesCVC.xib */; };
 		D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC178A29ED694A005800F4 /* Alamofire */; };
 		D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC179C29ED7BD2005800F4 /* Swime */; };
 /* End PBXBuildFile section */
@@ -113,6 +117,10 @@
 		019410792A0E792200BC7454 /* TransferDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailViewModel.swift; sourceTree = "<group>"; };
 		0194107B2A0E793800BC7454 /* TransferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailViewController.swift; sourceTree = "<group>"; };
 		0194107D2A0E794600BC7454 /* TransferDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferDetailViewController.storyboard; sourceTree = "<group>"; };
+		D574EEC72A0F75B700C208AA /* FavoriteContainerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteContainerTVC.swift; sourceTree = "<group>"; };
+		D574EEC82A0F75B700C208AA /* FavoriteContainerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteContainerTVC.xib; sourceTree = "<group>"; };
+		D574EECB2A0F763A00C208AA /* FavoritesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCVC.swift; sourceTree = "<group>"; };
+		D574EECC2A0F763A00C208AA /* FavoritesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCVC.xib; sourceTree = "<group>"; };
 		D5FC175B29ED68DB005800F4 /* BatTransferList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatTransferList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -354,8 +362,8 @@
 		0194106C2A0E3B3E00BC7454 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */,
-				019410702A0E3B7300BC7454 /* TransferListTVC.xib */,
+				D574EEC62A0F758F00C208AA /* TVC */,
+				D574EEC52A0F758900C208AA /* CVC */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -394,6 +402,26 @@
 				019410772A0E78F000BC7454 /* TransferDetailCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D574EEC52A0F758900C208AA /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				D574EECB2A0F763A00C208AA /* FavoritesCVC.swift */,
+				D574EECC2A0F763A00C208AA /* FavoritesCVC.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		D574EEC62A0F758F00C208AA /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				0194106F2A0E3B7300BC7454 /* TransferListTVC.swift */,
+				019410702A0E3B7300BC7454 /* TransferListTVC.xib */,
+				D574EEC72A0F75B700C208AA /* FavoriteContainerTVC.swift */,
+				D574EEC82A0F75B700C208AA /* FavoriteContainerTVC.xib */,
+			);
+			path = TVC;
 			sourceTree = "<group>";
 		};
 		D5FC175229ED68DB005800F4 = {
@@ -489,6 +517,8 @@
 				019410372A0E26ED00BC7454 /* Assets.xcassets in Resources */,
 				017A82162A0E831400EB3BD0 /* CardTVC.xib in Resources */,
 				017A821E2A0E833300EB3BD0 /* NoteTVC.xib in Resources */,
+				D574EECA2A0F75B700C208AA /* FavoriteContainerTVC.xib in Resources */,
+				D574EECE2A0F763A00C208AA /* FavoritesCVC.xib in Resources */,
 				0194107E2A0E794600BC7454 /* TransferDetailViewController.storyboard in Resources */,
 				017A82222A0E834100EB3BD0 /* HeaderTVC.xib in Resources */,
 				017A82112A0E82F800EB3BD0 /* PersonalTVC.xib in Resources */,
@@ -502,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D574EECD2A0F763A00C208AA /* FavoritesCVC.swift in Sources */,
 				019410782A0E78F000BC7454 /* TransferDetailCoordinator.swift in Sources */,
 				0194102D2A0E26ED00BC7454 /* DependencyContainer.swift in Sources */,
 				0194102F2A0E26ED00BC7454 /* RequestHeaderBuilder.swift in Sources */,
@@ -515,6 +546,7 @@
 				0194107A2A0E792200BC7454 /* TransferDetailViewModel.swift in Sources */,
 				019410512A0E2B3800BC7454 /* PlistHelper.swift in Sources */,
 				0194104E2A0E2A2400BC7454 /* UIView+Extensions.swift in Sources */,
+				D574EEC92A0F75B700C208AA /* FavoriteContainerTVC.swift in Sources */,
 				017A82282A0ED07900EB3BD0 /* TransferListDomainModel.swift in Sources */,
 				0194103A2A0E26ED00BC7454 /* String+Extensions.swift in Sources */,
 				017A82192A0E832200EB3BD0 /* TransferTVC.swift in Sources */,

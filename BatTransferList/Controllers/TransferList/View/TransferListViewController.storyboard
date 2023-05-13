@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,10 +37,53 @@
                                     <constraint firstItem="FHV-hd-CUJ" firstAttribute="height" secondItem="JuM-b2-uDK" secondAttribute="height" id="ynf-7P-JFL"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wrq-mQ-kYD">
-                                <rect key="frame" x="16" y="123" width="398" height="759"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wrq-mQ-kYD">
+                                <rect key="frame" x="16" y="179" width="398" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caY-7F-New" userLabel="search">
+                                <rect key="frame" x="16" y="123" width="398" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8H-37-cQz">
+                                        <rect key="frame" x="8" y="0.0" width="326" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9u-gX-yyV">
+                                        <rect key="frame" x="342" y="0.0" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Z9u-gX-yyV" secondAttribute="height" multiplier="1:1" id="aAu-2s-Igm"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Z9u-gX-yyV" secondAttribute="trailing" constant="8" id="5yG-x2-apt"/>
+                                    <constraint firstItem="M8H-37-cQz" firstAttribute="height" secondItem="caY-7F-New" secondAttribute="height" id="EjE-aQ-Ho7"/>
+                                    <constraint firstItem="M8H-37-cQz" firstAttribute="leading" secondItem="caY-7F-New" secondAttribute="leading" constant="8" id="Jkk-p1-lFd"/>
+                                    <constraint firstItem="M8H-37-cQz" firstAttribute="centerY" secondItem="caY-7F-New" secondAttribute="centerY" id="Kpy-dm-nVM"/>
+                                    <constraint firstAttribute="height" constant="48" id="Uzm-Fp-x7c"/>
+                                    <constraint firstItem="Z9u-gX-yyV" firstAttribute="height" secondItem="caY-7F-New" secondAttribute="height" id="dRt-Vg-E2g"/>
+                                    <constraint firstItem="Z9u-gX-yyV" firstAttribute="centerY" secondItem="caY-7F-New" secondAttribute="centerY" id="uUF-XV-BHO"/>
+                                    <constraint firstItem="M8H-37-cQz" firstAttribute="trailing" secondItem="Z9u-gX-yyV" secondAttribute="leading" constant="-8" id="yVk-u5-YlK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,27 +91,39 @@
                             <constraint firstItem="JuM-b2-uDK" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="1OA-vg-xLQ"/>
                             <constraint firstItem="wrq-mQ-kYD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2Hs-8g-iUh"/>
                             <constraint firstItem="wrq-mQ-kYD" firstAttribute="centerX" secondItem="JuM-b2-uDK" secondAttribute="centerX" id="3YA-HL-HPe"/>
+                            <constraint firstItem="caY-7F-New" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="4Xx-Fh-mc5"/>
                             <constraint firstItem="JuM-b2-uDK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7CW-wH-0NH"/>
-                            <constraint firstItem="wrq-mQ-kYD" firstAttribute="top" secondItem="JuM-b2-uDK" secondAttribute="bottom" constant="16" id="7Kp-Aj-b8y"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wrq-mQ-kYD" secondAttribute="trailing" constant="16" id="LO9-qj-FBU"/>
                             <constraint firstItem="JuM-b2-uDK" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Tdr-XF-Tr2"/>
+                            <constraint firstItem="caY-7F-New" firstAttribute="top" secondItem="JuM-b2-uDK" secondAttribute="bottom" constant="16" id="X5J-rq-bib"/>
+                            <constraint firstItem="caY-7F-New" firstAttribute="centerX" secondItem="JuM-b2-uDK" secondAttribute="centerX" id="jdR-wv-1gb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="caY-7F-New" secondAttribute="trailing" constant="16" id="ne8-bD-HNd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wrq-mQ-kYD" secondAttribute="bottom" constant="16" id="nje-cE-FBN"/>
+                            <constraint firstItem="wrq-mQ-kYD" firstAttribute="top" secondItem="caY-7F-New" secondAttribute="bottom" constant="8" id="pAk-I9-Bhi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Bcv-Kq-cJf"/>
                     <connections>
+                        <outlet property="searchTextfield" destination="M8H-37-cQz" id="xog-uX-83f"/>
                         <outlet property="transferTableView" destination="wrq-mQ-kYD" id="Jfu-EF-LmO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.64122137404581" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="936.2790697674418" y="3.218884120171674"/>
         </scene>
     </scenes>
     <resources>
         <image name="batman-6-512" width="512" height="512"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

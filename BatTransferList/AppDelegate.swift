@@ -5,9 +5,9 @@
 //  Created by Siamak on 4/17/23.
 //
 
+import AlamofireEasyLogger
 import Combine
 import UIKit
-import AlamofireEasyLogger
 
 // MARK: - AppDelegate
 
@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupWindow()
         bindFlowChange()
         return true
+    }
+
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return .portrait
     }
 
     // MARK: Private

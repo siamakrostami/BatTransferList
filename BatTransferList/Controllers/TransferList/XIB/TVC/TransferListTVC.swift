@@ -5,7 +5,6 @@
 //  Created by Siamak Rostami on 5/12/23.
 //
 
-import SDWebImage
 import UIKit
 
 class TransferListTVC: UITableViewCell {

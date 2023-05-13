@@ -20,6 +20,8 @@ class UserDefaultsHelper {
 }
 
 extension UserDefaultsHelper {
+    // MARK: - Insert model to userDefaults
+
     func insertModel(model: TransferListDomainModel) {
         if var dataArray = UserDefaults.standard.object(forKey: "favorites") as? Data {
             guard var decoded = try? JSONDecoder().decode([TransferListDomainModel].self, from: dataArray) else {
@@ -30,7 +32,7 @@ extension UserDefaultsHelper {
                 return
             }
             UserDefaults.standard.set(encoded, forKey: "favorites")
-            
+
         } else {
             var dataArray = [TransferListDomainModel]()
             dataArray.append(model)
@@ -41,7 +43,9 @@ extension UserDefaultsHelper {
         }
         UserDefaults.standard.synchronize()
     }
-    
+
+    // MARK: - Get all card numbers from userDefaults
+
     func getStoredCardNumbers() -> [String]? {
         guard let dataArray = UserDefaults.standard.object(forKey: "favorites") as? Data else {
             return nil
@@ -51,7 +55,9 @@ extension UserDefaultsHelper {
         }
         return decoded.map { $0.transferModel.card?.cardNumber ?? "" }
     }
-    
+
+    // MARK: - Remove model from userDefaults
+
     func removeModel(model: TransferListDomainModel) {
         guard let dataArray = UserDefaults.standard.object(forKey: "favorites") as? Data else {
             return
@@ -69,7 +75,9 @@ extension UserDefaultsHelper {
         UserDefaults.standard.set(encoded, forKey: "favorites")
         UserDefaults.standard.synchronize()
     }
-    
+
+    // MARK: - Get stored models
+
     func getFavoriteModels() -> [TransferListDomainModel]? {
         guard let dataArray = UserDefaults.standard.object(forKey: "favorites") as? Data else {
             return nil
@@ -77,7 +85,7 @@ extension UserDefaultsHelper {
         guard var decoded = try? JSONDecoder().decode([TransferListDomainModel].self, from: dataArray) else {
             return nil
         }
-        
+
         return decoded
     }
 }

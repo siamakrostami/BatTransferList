@@ -24,7 +24,7 @@ class TransferListViewController: BaseViewController {
             self.transferTableView.refreshControl = self.refreshControl
         }
     }
-    
+
     @IBOutlet var searchTextfield: UITextField! {
         didSet {
             searchTextfield.delegate = self
@@ -33,27 +33,29 @@ class TransferListViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initRefreshControl()
 
         // Do any additional setup after loading the view.
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.viewModel.reloadData()
     }
-    
+
     override func bind() {
         super.bind()
         self.bindTableReload()
-        self.initRefreshControl()
+        self.bindError()
     }
-    
+
     // MARK: Private
 
     private let refreshControl = UIRefreshControl()
 }
 
 extension TransferListViewController {
+    //MARK: - Bind reloadTable
     private func bindTableReload() {
         self.viewModel.shouldRealodTable
             .subscribe(on: DispatchQueue.main)
@@ -67,14 +69,26 @@ extension TransferListViewController {
             }
             .store(in: &self.viewModel.disboseBag)
     }
-    
+
     private func initRefreshControl() {
         self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
     }
-    
+
     @objc func refreshData() {
         self.refreshControl.endRefreshing()
         self.viewModel.reloadData()
+    }
+
+    private func bindError() {
+        self.viewModel.error
+            .subscribe(on: DispatchQueue.main)
+            .sink { [weak self] error in
+                guard let error = error else {
+                    return
+                }
+                self?.showAlert(message: error.localizedDescription)
+            }
+            .store(in: &self.viewModel.disboseBag)
     }
 }
 
@@ -86,7 +100,7 @@ extension TransferListViewController: UITextFieldDelegate {
         self.viewModel.searchText.send(text)
         return true
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.viewModel.searchText.send(textField.text)
         if textField.text == nil || textField.text!.isEmpty {
@@ -107,17 +121,22 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //- Handle logic for creating number of rows in each section
         guard self.viewModel.favorites != nil, !self.viewModel.favorites!.isEmpty else {
             if self.viewModel.isSearching {
                 guard self.viewModel.filteredArray != nil, !self.viewModel.filteredArray!.isEmpty else {
-                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting", font: .systemFont(ofSize: 16, weight: .semibold), alignment: .center)
+                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting",
+                                            font: .systemFont(ofSize: 16, weight: .semibold),
+                                            alignment: .center)
                     return 0
                 }
                 tableView.restore()
                 return self.viewModel.filteredArray?.count ?? 0
             } else {
                 guard self.viewModel.transferList.value != nil else {
-                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting", font: .systemFont(ofSize: 16, weight: .semibold), alignment: .center)
+                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting",
+                                            font: .systemFont(ofSize: 16, weight: .semibold),
+                                            alignment: .center)
                     return 0
                 }
                 tableView.restore()
@@ -130,14 +149,18 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
         default:
             if self.viewModel.isSearching {
                 guard self.viewModel.filteredArray != nil, !self.viewModel.filteredArray!.isEmpty else {
-                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting", font: .systemFont(ofSize: 16, weight: .semibold), alignment: .center)
+                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting",
+                                            font: .systemFont(ofSize: 16, weight: .semibold),
+                                            alignment: .center)
                     return 0
                 }
                 tableView.restore()
                 return self.viewModel.filteredArray?.count ?? 0
             } else {
                 guard self.viewModel.transferList.value != nil else {
-                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting", font: .systemFont(ofSize: 16, weight: .semibold), alignment: .center)
+                    tableView.setEmptyState(message: "Transfer List Is Empty", image: "batman-waiting",
+                                            font: .systemFont(ofSize: 16, weight: .semibold),
+                                            alignment: .center)
                     return 0
                 }
                 tableView.restore()
@@ -145,7 +168,7 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
             }
         }
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard tableView.numberOfSections > 1 else {
             return nil
@@ -170,17 +193,19 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard tableView.numberOfSections > 1 else {
             return .leastNormalMagnitude
         }
         return 50
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard self.viewModel.favorites != nil, !self.viewModel.favorites!.isEmpty else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TransferListTVC.identifier, for: indexPath) as? TransferListTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TransferListTVC.identifier,
+                                                           for: indexPath) as? TransferListTVC
+            else {
                 return .init()
             }
             if self.viewModel.isSearching {
@@ -205,7 +230,9 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
         }
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteContainerTVC.identifier, for: indexPath) as? FavoriteContainerTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteContainerTVC.identifier,
+                                                           for: indexPath) as? FavoriteContainerTVC
+            else {
                 return .init()
             }
             cell.selectionStyle = .none
@@ -221,7 +248,9 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
             }
             return cell
         default:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TransferListTVC.identifier, for: indexPath) as? TransferListTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TransferListTVC.identifier,
+                                                           for: indexPath) as? TransferListTVC
+            else {
                 return .init()
             }
             if self.viewModel.isSearching {
@@ -245,7 +274,7 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
             }
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard self.viewModel.favorites != nil, !self.viewModel.favorites!.isEmpty else {
             return 80
@@ -257,11 +286,11 @@ extension TransferListViewController: UITableViewDataSource, UITableViewDelegate
             return 80
         }
     }
-    
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewModel.handlePagination(index: indexPath.row)
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard self.viewModel.favorites != nil, !self.viewModel.favorites!.isEmpty else {
             guard let model = viewModel.transferList.value?[indexPath.row] else {

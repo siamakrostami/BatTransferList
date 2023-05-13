@@ -33,14 +33,14 @@ class TransferListTVC: UITableViewCell {
         self.profileImageView.image = UIImage(named: "batman-6-512")
     }
     
-    func configureCell(model: TransferListModel) {
+    func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
-            self.titleLabel.text = model.person?.fullName
-            self.subTitleLabel.text = model.card?.cardNumber
-            guard let avatar = model.person?.avatar , let avatarURL = URL(string: avatar) else {
+            self.titleLabel.text = model.transferModel.person?.fullName
+            self.subTitleLabel.text = model.transferModel.card?.cardNumber
+            self.favoriteImageView.isHidden = !model.isFavorited
+            guard let avatar = model.transferModel.person?.avatar , let avatarURL = URL(string: avatar) else {
                 return
             }
-            
             DispatchQueue.global(qos: .background).async {
                 guard let data = try? Data(contentsOf: avatarURL) else {return}
                 DispatchQueue.main.async {

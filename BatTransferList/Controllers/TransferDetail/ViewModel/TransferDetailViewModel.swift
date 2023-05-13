@@ -17,7 +17,7 @@ enum DetailSection: String, CaseIterable {
 
 class TransferDetailViewModel : BaseViewModel<DependencyContainer> {
     
-    init(dependency: DependencyContainer, model: TransferListModel) {
+    init(dependency: DependencyContainer, model: TransferListDomainModel) {
         self.container = dependency
         self.currentModel = model
         super.init(dependency: self.container)
@@ -30,7 +30,7 @@ class TransferDetailViewModel : BaseViewModel<DependencyContainer> {
     // MARK: Internal
 
     var container: DependencyContainer
-    var currentModel : TransferListModel
+    var currentModel : TransferListDomainModel
     var shouldRealodTable = CurrentValueSubject<Bool?,Never>(nil)
     var sections = DetailSection.allCases
 

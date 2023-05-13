@@ -24,10 +24,10 @@ class CardTVC: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configureCell(model: TransferListModel) {
+    func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
-            self.typeLabel.text = model.card?.cardType
-            self.numberLabel.text = model.card?.cardNumber
+            self.typeLabel.text = model.transferModel.card?.cardType
+            self.numberLabel.text = model.transferModel.card?.cardNumber
         }
     }
 }

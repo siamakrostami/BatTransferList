@@ -23,9 +23,9 @@ class NoteTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(model: TransferListModel) {
+    func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
-            self.noteLabel.text = model.note
+            self.noteLabel.text = model.transferModel.note
         }
     }
 }

@@ -26,11 +26,11 @@ class TransferTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(model: TransferListModel) {
+    func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
-            self.lastTransferLabel.text = model.lastTransfer
-            self.numberOfTransferLabel.text = "\(model.moreInfo?.numberOfTransfers ?? 0)"
-            self.totalTransferLabel.text = "\(model.moreInfo?.totalTransfer ?? 0)"
+            self.lastTransferLabel.text = model.transferModel.lastTransfer
+            self.numberOfTransferLabel.text = "\(model.transferModel.moreInfo?.numberOfTransfers ?? 0)"
+            self.totalTransferLabel.text = "\(model.transferModel.moreInfo?.totalTransfer ?? 0)"
         }
     }
 }

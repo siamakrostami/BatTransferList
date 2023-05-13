@@ -40,6 +40,15 @@ class TransferDetailViewController: BaseViewController {
     }
     
     @IBAction func toggleFavorite(_ sender: Any) {
+        if self.viewModel.currentModel.isFavorited{
+            self.viewModel.currentModel.isFavorited = false
+            UserDefaultsHelper.shared.removeModel(model: self.viewModel.currentModel)
+            self.favoriteButton.setTitle("Add To Favorites", for: .normal)
+        }else{
+            self.viewModel.currentModel.isFavorited = true
+            UserDefaultsHelper.shared.insertModel(model: self.viewModel.currentModel)
+            self.favoriteButton.setTitle("Remove From Favorites", for: .normal)
+        }
     }
     
     
@@ -52,7 +61,12 @@ extension TransferDetailViewController{
     
     private func setFullName() {
         DispatchQueue.main.async {
-            self.fullNameLabel.text = self.viewModel.currentModel.person?.fullName
+            self.fullNameLabel.text = self.viewModel.currentModel.transferModel.person?.fullName
+            if self.viewModel.currentModel.isFavorited {
+                self.favoriteButton.setTitle("Remove From Favorites", for: .normal)
+            }else{
+                self.favoriteButton.setTitle("Add To Favorites", for: .normal)
+            }
         }
     }
     
@@ -104,7 +118,7 @@ extension TransferDetailViewController: UITableViewDelegate, UITableViewDataSour
         case 2:
             return 147
         default:
-            let size = viewModel.currentModel.note?.height(withConstrainedWidth: tableView.frame.width, .systemFont(ofSize: 20))
+            let size = viewModel.currentModel.transferModel.note?.height(withConstrainedWidth: tableView.frame.width, .systemFont(ofSize: 20))
             return (size ?? 0) + 21
         }
     }

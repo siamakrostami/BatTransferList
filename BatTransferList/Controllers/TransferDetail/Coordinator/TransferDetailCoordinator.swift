@@ -8,7 +8,7 @@
 import Foundation
 
 extension BaseCoordinator {
-    func openTransferDetail(dependency: DependencyContainer, model: TransferListModel) {
+    func openTransferDetail(dependency: DependencyContainer, model: TransferListDomainModel) {
         let controller = TransferDetailViewController.instantiateViewController()
         controller.viewModel = .init(dependency: dependency, model: model)
         controller.coordinator = self

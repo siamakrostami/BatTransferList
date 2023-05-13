@@ -16,7 +16,6 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
     init(dependency: DependencyContainer) {
         self.container = dependency
         super.init(dependency: self.container)
-        getTransferList()
     }
     
     required init(dependency: Dependency) {
@@ -30,6 +29,7 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
     var currentPage: Int = 1
     var transferList = CurrentValueSubject<[TransferListDomainModel]?, Never>(nil)
     var shouldRealodTable = CurrentValueSubject<Bool?,Never>(nil)
+    var favorites: [TransferListDomainModel]?
 }
 
 extension TransferListViewModel {
@@ -96,6 +96,7 @@ extension TransferListViewModel {
             let domain = TransferListDomainModel(transferModel: $0, isFavorited: isFavorited)
             self.transferList.value?.append(domain)
         }
+        self.favorites = UserDefaultsHelper.shared.getFavoriteModels()
         
     }
 }

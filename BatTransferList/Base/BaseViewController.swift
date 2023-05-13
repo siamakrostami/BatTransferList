@@ -22,3 +22,13 @@ class BaseViewController: UIViewController, StoryboardInstantiable {
     func bind() {}
 }
 
+extension BaseViewController {
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Dismiss", style: .destructive)
+        alertController.addAction(action)
+        self.present(alertController, animated: true)
+    }
+
+}

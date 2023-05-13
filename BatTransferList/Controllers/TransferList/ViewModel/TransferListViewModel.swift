@@ -18,7 +18,7 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
         super.init(dependency: self.container)
         self.bindSearchText()
     }
-    
+
     required init(dependency: Dependency) {
         fatalError("init(dependency:) has not been implemented")
     }
@@ -26,25 +26,30 @@ class TransferListViewModel: BaseViewModel<DependencyContainer> {
     // MARK: Internal
 
     var container: DependencyContainer
-    
+
     var currentPage: Int = 1
     var transferList = CurrentValueSubject<[TransferListDomainModel]?, Never>(nil)
-    var shouldRealodTable = CurrentValueSubject<Bool?,Never>(nil)
+    var shouldRealodTable = CurrentValueSubject<Bool?, Never>(nil)
     var favorites: [TransferListDomainModel]?
-    var searchText = CurrentValueSubject<String?,Never>(nil)
+    var searchText = CurrentValueSubject<String?, Never>(nil)
     var filteredArray: [TransferListDomainModel]?
     var isSearching: Bool = false
 }
 
 extension TransferListViewModel {
-    
-    func reloadData(){
+    // MARK: - Reload data for a refresh api call
+
+    func reloadData() {
         self.currentPage = 1
         self.getTransferList()
     }
-    
-    func handlePagination(index: Int){
-        guard let model = self.transferList.value else {return}
+
+    // MARK: - Pagination
+
+    func handlePagination(index: Int) {
+        guard let model = self.transferList.value else {
+            return
+        }
         if index == model.count - 1 {
             if self.currentPage <= 3 {
                 self.currentPage += 1
@@ -52,7 +57,10 @@ extension TransferListViewModel {
             }
         }
     }
- 
+
+    // MARK: - API Call
+
+    /// - to get data from network
     func getTransferList() {
         if self.currentPage == 1 {
             self.transferList.send(nil)
@@ -77,7 +85,10 @@ extension TransferListViewModel {
             })
             .store(in: &self.disboseBag)
     }
-    
+
+    // MARK: - Create Custom Model
+
+    /// convert api model to domain model
     private func createTransferArrayFromModel(model: [TransferListModel]?) {
         guard let model = model else {
             self.transferList.send(nil)
@@ -91,10 +102,10 @@ extension TransferListViewModel {
         var isFavorited = false
 
         model.forEach {
-            if let numbers = UserDefaultsHelper.shared.getStoredCardNumbers(){
-                if numbers.contains($0.card?.cardNumber ?? ""){
+            if let numbers = UserDefaultsHelper.shared.getStoredCardNumbers() {
+                if numbers.contains($0.card?.cardNumber ?? "") {
                     isFavorited = true
-                }else{
+                } else {
                     isFavorited = false
                 }
             }
@@ -102,17 +113,20 @@ extension TransferListViewModel {
             self.transferList.value?.append(domain)
         }
         self.favorites = UserDefaultsHelper.shared.getFavoriteModels()
-        
     }
-    
-    private func bindSearchText(){
+
+    // MARK: - Bind searchText
+
+    private func bindSearchText() {
         self.searchText.subscribe(on: DispatchQueue.main)
             .sink { [weak self] search in
                 self?.filterArray(searchText: search)
             }
             .store(in: &self.disboseBag)
     }
-    
+
+    // MARK: - Filter transfers array with searchText
+
     private func filterArray(searchText: String?) {
         guard let searchText = searchText else {
             self.filteredArray = nil
@@ -125,13 +139,13 @@ extension TransferListViewModel {
             return
         }
         var tempArray = [TransferListDomainModel]()
-        transferList.forEach{
+        transferList.forEach {
             guard let fullname = $0.transferModel.person?.fullName else {
                 self.filteredArray = nil
                 self.shouldRealodTable.send(true)
                 return
             }
-            if fullname.contains(searchText){
+            if fullname.contains(searchText) {
                 tempArray.append($0)
             }
         }

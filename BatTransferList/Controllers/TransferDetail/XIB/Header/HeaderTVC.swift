@@ -8,11 +8,9 @@
 import UIKit
 
 class HeaderTVC: UITableViewCell {
-    
     static let identifier = "HeaderTVC"
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
+
+    @IBOutlet var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +22,4 @@ class HeaderTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

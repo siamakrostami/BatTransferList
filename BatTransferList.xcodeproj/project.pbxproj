@@ -39,7 +39,6 @@
 		019410472A0E26ED00BC7454 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410282A0E26EC00BC7454 /* BaseViewModel.swift */; };
 		019410482A0E26ED00BC7454 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410292A0E26EC00BC7454 /* AppEnvironment.swift */; };
 		019410492A0E26ED00BC7454 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194102A2A0E26EC00BC7454 /* StoryboardInstantiable.swift */; };
-		0194104C2A0E290600BC7454 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0194104B2A0E290600BC7454 /* SDWebImage */; };
 		0194104E2A0E2A2400BC7454 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194104D2A0E2A2400BC7454 /* UIView+Extensions.swift */; };
 		019410512A0E2B3800BC7454 /* PlistHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410502A0E2B3800BC7454 /* PlistHelper.swift */; };
 		019410532A0E2C5E00BC7454 /* TransferListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019410522A0E2C5E00BC7454 /* TransferListServices.swift */; };
@@ -62,9 +61,20 @@
 		D574EECA2A0F75B700C208AA /* FavoriteContainerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D574EEC82A0F75B700C208AA /* FavoriteContainerTVC.xib */; };
 		D574EECD2A0F763A00C208AA /* FavoritesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574EECB2A0F763A00C208AA /* FavoritesCVC.swift */; };
 		D574EECE2A0F763A00C208AA /* FavoritesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D574EECC2A0F763A00C208AA /* FavoritesCVC.xib */; };
+		D5C2BFE52A0FA23E0051936E /* BatTransferListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2BFE42A0FA23E0051936E /* BatTransferListTests.swift */; };
 		D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC178A29ED694A005800F4 /* Alamofire */; };
 		D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */ = {isa = PBXBuildFile; productRef = D5FC179C29ED7BD2005800F4 /* Swime */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5C2BFE62A0FA23E0051936E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5FC175329ED68DB005800F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5FC175A29ED68DB005800F4;
+			remoteInfo = BatTransferList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		017A820E2A0E82F800EB3BD0 /* PersonalTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTVC.swift; sourceTree = "<group>"; };
@@ -121,15 +131,23 @@
 		D574EEC82A0F75B700C208AA /* FavoriteContainerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteContainerTVC.xib; sourceTree = "<group>"; };
 		D574EECB2A0F763A00C208AA /* FavoritesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCVC.swift; sourceTree = "<group>"; };
 		D574EECC2A0F763A00C208AA /* FavoritesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCVC.xib; sourceTree = "<group>"; };
+		D5C2BFE22A0FA23E0051936E /* BatTransferListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatTransferListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C2BFE42A0FA23E0051936E /* BatTransferListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatTransferListTests.swift; sourceTree = "<group>"; };
 		D5FC175B29ED68DB005800F4 /* BatTransferList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatTransferList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D5C2BFDF2A0FA23E0051936E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5FC175829ED68DB005800F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0194104C2A0E290600BC7454 /* SDWebImage in Frameworks */,
 				0194106A2A0E327600BC7454 /* AlamofireEasyLogger in Frameworks */,
 				D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */,
 				D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */,
@@ -424,10 +442,19 @@
 			path = TVC;
 			sourceTree = "<group>";
 		};
+		D5C2BFE32A0FA23E0051936E /* BatTransferListTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5C2BFE42A0FA23E0051936E /* BatTransferListTests.swift */,
+			);
+			path = BatTransferListTests;
+			sourceTree = "<group>";
+		};
 		D5FC175229ED68DB005800F4 = {
 			isa = PBXGroup;
 			children = (
 				01940FF82A0E26EC00BC7454 /* BatTransferList */,
+				D5C2BFE32A0FA23E0051936E /* BatTransferListTests */,
 				D5FC175C29ED68DB005800F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -436,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				D5FC175B29ED68DB005800F4 /* BatTransferList.app */,
+				D5C2BFE22A0FA23E0051936E /* BatTransferListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -443,6 +471,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D5C2BFE12A0FA23E0051936E /* BatTransferListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C2BFE82A0FA23E0051936E /* Build configuration list for PBXNativeTarget "BatTransferListTests" */;
+			buildPhases = (
+				D5C2BFDE2A0FA23E0051936E /* Sources */,
+				D5C2BFDF2A0FA23E0051936E /* Frameworks */,
+				D5C2BFE02A0FA23E0051936E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5C2BFE72A0FA23E0051936E /* PBXTargetDependency */,
+			);
+			name = BatTransferListTests;
+			productName = BatTransferListTests;
+			productReference = D5C2BFE22A0FA23E0051936E /* BatTransferListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D5FC175A29ED68DB005800F4 /* BatTransferList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5FC176F29ED68DC005800F4 /* Build configuration list for PBXNativeTarget "BatTransferList" */;
@@ -459,7 +505,6 @@
 			packageProductDependencies = (
 				D5FC178A29ED694A005800F4 /* Alamofire */,
 				D5FC179C29ED7BD2005800F4 /* Swime */,
-				0194104B2A0E290600BC7454 /* SDWebImage */,
 				019410692A0E327600BC7454 /* AlamofireEasyLogger */,
 			);
 			productName = Architecture;
@@ -476,6 +521,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					D5C2BFE12A0FA23E0051936E = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = D5FC175A29ED68DB005800F4;
+					};
 					D5FC175A29ED68DB005800F4 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -493,7 +542,6 @@
 			packageReferences = (
 				D5FC178929ED694A005800F4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D5FC179B29ED7BD2005800F4 /* XCRemoteSwiftPackageReference "Swime" */,
-				0194104A2A0E290600BC7454 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */,
 			);
 			productRefGroup = D5FC175C29ED68DB005800F4 /* Products */;
@@ -501,11 +549,19 @@
 			projectRoot = "";
 			targets = (
 				D5FC175A29ED68DB005800F4 /* BatTransferList */,
+				D5C2BFE12A0FA23E0051936E /* BatTransferListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D5C2BFE02A0FA23E0051936E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5FC175929ED68DB005800F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +584,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D5C2BFDE2A0FA23E0051936E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C2BFE52A0FA23E0051936E /* BatTransferListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5FC175729ED68DB005800F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +642,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D5C2BFE72A0FA23E0051936E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5FC175A29ED68DB005800F4 /* BatTransferList */;
+			targetProxy = D5C2BFE62A0FA23E0051936E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0194100D2A0E26EC00BC7454 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -590,6 +662,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D5C2BFE92A0FA23E0051936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siamak.BatTransferListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatTransferList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BatTransferList";
+			};
+			name = Debug;
+		};
+		D5C2BFEA2A0FA23E0051936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siamak.BatTransferListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatTransferList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BatTransferList";
+			};
+			name = Release;
+		};
 		D5FC176D29ED68DC005800F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -771,6 +877,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D5C2BFE82A0FA23E0051936E /* Build configuration list for PBXNativeTarget "BatTransferListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C2BFE92A0FA23E0051936E /* Debug */,
+				D5C2BFEA2A0FA23E0051936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D5FC175629ED68DB005800F4 /* Build configuration list for PBXProject "BatTransferList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -792,14 +907,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0194104A2A0E290600BC7454 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 5.9.0;
-			};
-		};
 		019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/strvcom/AlamofireEasyLogger";
@@ -827,11 +934,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0194104B2A0E290600BC7454 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0194104A2A0E290600BC7454 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
 		019410692A0E327600BC7454 /* AlamofireEasyLogger */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */;

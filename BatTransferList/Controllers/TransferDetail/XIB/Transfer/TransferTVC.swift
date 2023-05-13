@@ -8,7 +8,6 @@
 import UIKit
 
 class TransferTVC: UITableViewCell {
-    
     static let identifier = "TransferTVC"
 
     @IBOutlet var lastTransferLabel: UILabel!
@@ -25,7 +24,7 @@ class TransferTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
             self.lastTransferLabel.text = model.transferModel.lastTransfer

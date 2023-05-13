@@ -23,14 +23,14 @@ class PersonalTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
             self.emailLabel.text = model.transferModel.person?.email
             guard let avatar = model.transferModel.person?.avatar, let avatarURL = URL(string: avatar) else {
                 return
             }
-            
+
             DispatchQueue.global(qos: .background).async {
                 guard let data = try? Data(contentsOf: avatarURL) else {
                     return

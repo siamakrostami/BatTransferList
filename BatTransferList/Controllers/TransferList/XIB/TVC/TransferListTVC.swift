@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 class TransferListTVC: UITableViewCell {
     static let identifier = "TransferListTVC"
@@ -40,12 +41,8 @@ class TransferListTVC: UITableViewCell {
             guard let avatar = model.transferModel.person?.avatar , let avatarURL = URL(string: avatar) else {
                 return
             }
-            DispatchQueue.global(qos: .background).async {
-                guard let data = try? Data(contentsOf: avatarURL) else {return}
-                DispatchQueue.main.async {
-                    self.profileImageView.image = UIImage(data: data)
-                }
-            }
+            let option = ImageLoadingOptions(placeholder: UIImage(named: "batman-6-512"),transition: .fadeIn(duration: 0.3))
+            Nuke.loadImage(with: avatarURL,options: option,into: self.profileImageView)
         }
     }
 }

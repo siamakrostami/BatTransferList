@@ -25,7 +25,7 @@ class NoteTVC: UITableViewCell {
 
     func configureCell(model: TransferListDomainModel) {
         DispatchQueue.main.async {
-            self.noteLabel.text = model.transferModel.note
+            self.noteLabel.text = model.transferModel.note ?? "Note Not Found"
         }
     }
 }

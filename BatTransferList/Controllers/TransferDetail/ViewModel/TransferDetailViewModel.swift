@@ -35,3 +35,17 @@ class TransferDetailViewModel : BaseViewModel<DependencyContainer> {
     var sections = DetailSection.allCases
 
 }
+
+extension TransferDetailViewModel {
+    
+    func addToFavorites(){
+        UserDefaultsHelper.shared.insertModel(model: self.currentModel)
+    }
+    
+    func removeFromFavorites(){
+        UserDefaultsHelper.shared.removeModel(model: self.currentModel)
+    }
+    
+    
+    
+}

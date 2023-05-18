@@ -64,7 +64,10 @@ extension TransferListViewController {
                     return
                 }
                 if shoudReload {
-                    self?.transferTableView.reloadData()
+                    UIView.performWithoutAnimation {
+                        self?.transferTableView.reloadData()
+                    }
+                    
                 }
             }
             .store(in: &self.viewModel.disboseBag)

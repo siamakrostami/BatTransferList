@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0163D2592A1688B100E6571E /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 0163D2582A1688B100E6571E /* Nuke */; };
 		017A82102A0E82F800EB3BD0 /* PersonalTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A820E2A0E82F800EB3BD0 /* PersonalTVC.swift */; };
 		017A82112A0E82F800EB3BD0 /* PersonalTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A820F2A0E82F800EB3BD0 /* PersonalTVC.xib */; };
 		017A82152A0E831400EB3BD0 /* CardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A82132A0E831400EB3BD0 /* CardTVC.swift */; };
@@ -151,6 +152,7 @@
 				0194106A2A0E327600BC7454 /* AlamofireEasyLogger in Frameworks */,
 				D5FC179D29ED7BD2005800F4 /* Swime in Frameworks */,
 				D5FC178B29ED694A005800F4 /* Alamofire in Frameworks */,
+				0163D2592A1688B100E6571E /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +508,7 @@
 				D5FC178A29ED694A005800F4 /* Alamofire */,
 				D5FC179C29ED7BD2005800F4 /* Swime */,
 				019410692A0E327600BC7454 /* AlamofireEasyLogger */,
+				0163D2582A1688B100E6571E /* Nuke */,
 			);
 			productName = Architecture;
 			productReference = D5FC175B29ED68DB005800F4 /* BatTransferList.app */;
@@ -543,6 +546,7 @@
 				D5FC178929ED694A005800F4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D5FC179B29ED7BD2005800F4 /* XCRemoteSwiftPackageReference "Swime" */,
 				019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */,
+				0163D2572A1688B100E6571E /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = D5FC175C29ED68DB005800F4 /* Products */;
 			projectDirPath = "";
@@ -907,6 +911,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0163D2572A1688B100E6571E /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
 		019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/strvcom/AlamofireEasyLogger";
@@ -934,6 +946,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0163D2582A1688B100E6571E /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0163D2572A1688B100E6571E /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		019410692A0E327600BC7454 /* AlamofireEasyLogger */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 019410682A0E327600BC7454 /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */;
